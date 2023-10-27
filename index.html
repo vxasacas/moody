@@ -4,11 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moody</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="loader-container" id="loader">
+        
+    </div>
     <div>
-        <h1>hola esto es moody</h1>
+        <header class="wrapper header-nav">
+            <h2>Moody</h2> 
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a class="nav-link" href="#about">About Moody</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a class="nav-link" href="#collaboration">Want to collaborate?</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a class="nav-link" href="#report-bug">Report a bug</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Pagina principal -->
+        <section>
+            <h1>LET'S START COMMENTING MORE FAST ?</h1>
+            <button class="btn-start-project">START HERE .></button>
+        </section>
+        
+        <!-- Formulario para crear el proyecto-->
+        <section>
+            <form action="/mload-data-process" method="post">
+                <fieldset>
+                    <span>01/04</span>
+                    <legend>Empecemos un nuevo proyecto, escoge tu roll C:</legend>
+                    <label><input type="radio" name="radio" value="dev" />Web Developer</label>
+                    <label><input type="radio" name="radio" value="content" />Content Developer</label>
+                </fieldset>
+
+                <fieldset>
+                    <span>02/04</span>
+                    <legend>Ahora ingresemos informacion general del proyecto</legend>
+                    <label for="project-master"> Master ticket del proyecto
+                        <input type="text" name="project-master" id="project-master-jira" placeholder="MY24BRZ24ML-1"/>
+                    </label>
+
+                    <label for="project-master"> Branch de git del proyecto
+                        <input type="text" name="project-master" id="project-master-jira" placeholder="brz-mload-2024"/>
+                    </label>
+
+                    <label for="project-master"> Proj server del proyecto
+                        <input type="text" name="project-master" id="project-master-jira" placeholder="proj4.boxer.subaru.com"/>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <span>02/04</span>
+                    <legend>Por ultimo vamos a seleccionar un modelo</legend>
+                    
+                    <select name="modelo" id="modelo">
+                        <option value="sol">SOL</option>
+                        <option value="asc">ASC</option>
+                        <option value="for">FOR</option>
+                        <option value="ctk">CTK</option>
+                        <option value="leg">LEG</option>
+                        <option value="obk">OBK</option>
+                        <option value="imp">IMP</option>
+                        <option value="wrx">WRX</option>
+                    </select>
+                </fieldset>    
+    
+                <button type="submit">Prev</button>
+                <button type="submit">Next</button>
+                <button type="submit">Crear proyecto</button>
+            </form>
+        </section>
+
+        <!-- About page -->
+        <section>
+            <h2></h2>
+        </section>
+
+        <!-- Collaboration page -->
+
+        <!-- Report a bug -->
+
+        <!-- Lista de Assets -->
+        <section id="about" class="wrapper">
+            <h3>About the project</h3>
+            <p>"Moody" es un proyecto nacido de la inspiración del Code Challenge 2023, diseñado para aliviar 
+                la carga de trabajo del equipo a la hora de crear tiquetes para QA</p>
+            <p>En un esfuerzo por demostrar un sólido conocimiento técnico básico, Moody se desarrolla utilizando 
+                tecnologías esenciales que incluyen HTML, CSS y JavaScript. Estas herramientas permitirán la creación 
+                de una interfaz efectiva y fácil de usar para poder crear comentarios de tiquetes.</p>
+            <p>En un principio la idea era la de crear la tercera opcion del challenge, que nos ayudaria a crear el proyecto, peroo la verdad es que lo vi
+                muy dificil asi que me quede con la opcion de animar el formulario.</p>
+        </section>
+
+
     </div>
     <script src="./js/main.js"></script>
 </body>
