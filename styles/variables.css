@@ -1,0 +1,13 @@
+:root {
+    --color-primary: #ABBDDC;
+    --color-secondary: #C5D2E7;
+    --color-text: #272F3D;
+    --color-background: #FFFFFF;
+    --color-text-button: #FFFFFF;
+
+    --font-family:  'Lato', sans-serif;
+    --font-wght-light: 300;
+    --font-wght-regular: 400;
+    --font-wght-bold: 700;
+    --font-wght-black: 900;
+}
