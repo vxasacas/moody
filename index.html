@@ -32,81 +32,82 @@
         <!-- Pagina principal -->
         <section class="container">
             <h1>LET’S CREATE EFFECTIVE COMMENTS</h1>
-            <button class="btn-start-project" id="startProject">Create new project</button>
-            
-            <!-- Aca se creara el formulario-->
-            <div>
-
-            </div>
+            <a class="btn-start-project  next-tbn" href="#form">Create new project</a>
 
         </section>
         <!-- Formulario para crear el proyecto -->
-        <section class="container form form-create-project">
-            <div class="form-image-animation">
-                <svg></svg>
-            </div>
+        <section class="container" id="form">
+            <h2>Let's create a new project</h2>
+            <div class="form form-container">
+                <div class="form-image-animation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="445" height="418" viewBox="0 0 565 518" fill="none">
+                        <path d="M562.715 265.13C584.147 403.226 426.045 490.54 287.949 511.972C149.853 533.404 23.3899 490.253 1.95801 352.157C-19.4739 214.061 159.206 24.4903 297.302 3.05842C435.398 -18.3735 541.283 127.034 562.715 265.13Z" fill="#ABBDDC"/>
+                    </svg>
+                </div>
             
-            <form action="/mload-data-process" method="post">
-                <fieldset class="">
-                    <span>1 / 6</span>
-                    <legend>Choose you main roll on the project </legend>
-                    <label><input type="radio" name="radio" value="dev" />Web Developer</label>
-                    <label><input type="radio" name="radio" value="content" />Content Developer</label>
-                </fieldset>
+                <form action="/mload-data-process" method="post">
+                    <fieldset class="step">
+                        <legend>1 / 6</legend>
+                        <h3>Choose you main roll on the project </h3>
+                        <div class="radio-input-container">
+                            <label><input class="input-radio-roll" type="radio" name="radio" value="dev" />Web Developer</label>
+                            <label><input class="input-radio-roll" type="radio" name="radio" value="content" />Content Developer</label>
+                        </div>
+                    </fieldset>
 
-                <fieldset>
-                    <span>2 / 6</span>
-                    <legend>Add the git branch of the project</legend>
-                    <label class="input-text" for="project-master"> Master ticket del proyecto
-                        <input type="text" name="project-master" id="project-master-jira" placeholder="MY24BRZ24ML-1"/>
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <span>3 / 6</span>
-                    <legend>Add the project main server</legend>
-                    <label class="input-text" for="project-master"> Branch de git del proyecto
-                        <input type="text" name="project-master" id="project-master-jira" placeholder="brz-mload-2024"/>
-                    </label>
-                </fieldset>
-                <fieldset>
-                    <span>4 / 6</span>
-                    <legend>Do you want to add the jira master ticket?</legend>
-                    <label class="input-text" for="project-master"> Proj server del proyecto
-                        <input type="text" name="project-master" id="project-master-jira" placeholder="proj4.boxer.subaru.com"/>
-                    </label>
-                </fieldset>
+                    <fieldset class="step hidden">
+                        <legend>2 / 6</legend>
+                        <h3>Add the git branch of the project</h3>
+                        <label for="project-master">Branch of the project</label>
+                        <input class="input-text" type="text" name="project-master" id="project-master-jira" placeholder="MY24BRZ24ML-1"/>
+                    </fieldset>
 
-                <fieldset>
-                    <span>5 / 6</span>
-                    <legend>Choose the model of the current project</legend>
-                    
-                    <select name="modelo" id="modelo">
-                        <option value="sol">SOL</option>
-                        <option value="asc">ASC</option>
-                        <option value="for">FOR</option>
-                        <option value="ctk">CTK</option>
-                        <option value="leg">LEG</option>
-                        <option value="obk">OBK</option>      
-                        <option value="imp">IMP</option>
-                        <option value="wrx">WRX</option>
-                    </select>
-                </fieldset>
+                    <fieldset class="step hidden">
+                        <legend>3 / 6</legend>
+                        <h3>Add the master ticket of jira project</h3>
+                        <label for="project-master">Jira master ticket</label>
+                        <input class="input-text" type="text" name="project-master" id="project-master-jira" placeholder="brz-mload-2024"/>
+                    </fieldset>
 
-                <fieldset>
-                    <span>6 / 6</span>
-                    <legend>Choose the year of the current project</legend>
-                    
-                    <select name="year" id="year">
-                        <option value="2024">2024</option>
-                        <option value="2025">2023</option>
-                        <option value="2023">2025</option>
-                    </select>
-                </fieldset>    
-    
-                <button type="submit">Prev</button>
-                <button type="submit">Next</button>
-                <button type="submit">Crear proyecto</button>
-            </form>
+                    <fieldset class="step hidden">
+                        <legend>4 / 6</legend>
+                        <h3>Add the proj server of the project</h3>
+                        <label for="project-master">Proj server</label>
+                        <input class="input-text" type="text" name="project-master" id="project-master-jira" placeholder="proj4.boxer.subaru.com"/>
+                    </fieldset>
+
+                    <fieldset class="step hidden">
+                        <legend>5 / 6</legend>
+                        <h3>Choose the model of the current project</h3>
+                        
+                        <select name="modelo" id="modelo">
+                            <option value="sol">SOL</option>
+                            <option value="asc">ASC</option>
+                            <option value="for">FOR</option>
+                            <option value="ctk">CTK</option>
+                            <option value="leg">LEG</option>
+                            <option value="obk">OBK</option>      
+                            <option value="imp">IMP</option>
+                            <option value="wrx">WRX</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="step hidden">
+                        <legend>6 / 6</legend>
+                        <h3>Choose the year of the current project</h3>
+                        
+                        <select name="year" id="year">
+                            <option value="2024">2024</option>
+                            <option value="2025">2023</option>
+                            <option value="2023">2025</option>
+                        </select>
+                    </fieldset>    
+        
+                    <button class="hidden" type="">Prev</button>
+                    <a class="active next-tbn" type="">Next</a>
+                    <button class="hidden" type="submit">Crear proyecto</button>
+                </form>
+            </div>
         </section>
 
         <footer>

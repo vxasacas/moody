@@ -61,7 +61,7 @@ a {
     color: var(--color-text);
 }
 
-button {
+button, .next-tbn {
     border: 2px var(--color-primary) solid;
     border-radius: 25px;
     background-color: var(--color-primary);
@@ -70,17 +70,10 @@ button {
     padding: 12px 45px;
 }
 
-.form-create-project {
-    display: flex;
-    flex-direction: row;
-}
-
-.form-image-animation {
-    background-color: var(--color-secondary);
-    height: 450px;
-    margin: 40px;
-}
-
 footer {
     height: 75px;
+}
+
+.hidden {
+    display: none;
 }
