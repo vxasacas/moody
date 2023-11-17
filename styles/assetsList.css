@@ -1,0 +1,35 @@
+
+.assets__container {
+    display: grid;
+    grid-template-columns: repeat(3, 30% [col-start]);
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.asset__item {
+    font-size: 16;
+    margin: 10px 0;
+    padding-bottom: 8px;
+    list-style: none;
+}
+
+.asset__item--check {
+    appearance: none;
+    background-color: var(--color-background);
+    border: 3px var(--color-text) solid;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 20px;
+    margin-right: 8px;
+    outline: none;
+    width: 20px;
+}
+
+.asset__item--check:checked {
+    background-image: url('../images/dot.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+

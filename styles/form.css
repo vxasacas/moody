@@ -1,0 +1,124 @@
+@keyframes stepScrollAnimation {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.form {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form__section {
+    display: flex;
+}
+
+.form-description {
+    width: 45%;
+}
+
+.form__steps::-webkit-scrollbar {
+    display: none;
+}
+
+.form__steps {
+    background-size: cover;
+    height: 375px;
+    overflow: auto;
+    width: 450px;
+}
+
+.form__step {
+    display: flex;
+    border: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+    text-align: center;
+    height: 275px;
+
+    view-timeline-name: --step;
+    view-timeline-axis: block;
+
+    animation-timeline: --step;
+    animation-name: stepScrollAnimation;
+    
+    animation-range: entry 5% cover 30%;
+    animation-fill-mode:  both;
+
+}
+
+.step__number {
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: var(--font-wght-black);
+}
+
+.form__input--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form__input--container label {
+    width: 120px;
+    display: flex;
+}
+
+.form__input {
+    border: 3px var(--color-text) solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    padding: 8px;
+    width: 320px;
+}
+
+.form__input--radio {
+    appearance: none;
+    background-color: #fff;
+    color: var(--color-text);
+    font: inherit;
+    height: 20px;
+    width: 20px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    margin-right: 8px;
+}
+
+.form__input--radio::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--color-text);
+}
+
+.form__input--radio:checked::before {
+    transform: scale(1);
+}
+
+.form__input--text, .form__input--select {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.form__input--select option {
+    margin: 8px;
+} 
+
+.form__button--send {
+    background-color: var(--color-primary);
+}
