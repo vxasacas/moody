@@ -10,108 +10,117 @@
     <link rel="stylesheet" href="./styles/index.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-    <div class="loader-container" id="loader"></div>
-    <div class="main-container">
+    <div>
         <header>
-            <h2>Moody</h2> 
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-list-item">
-                        <a class="nav-link" href="#about">About Moody</a>
+            <nav class="wrapper navigation">
+                <h3>Moody</h3>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="item__link" href="#">Queres colaborar?</a>
                     </li>
-                    <li class="nav-list-item">
-                        <a class="nav-link" href="#">Want to collaborate?</a>
-                    </li>
-                    <li class="nav-list-item">
-                        <a class="nav-link" href="#report-bug">Report a bug</a>
+                    <li class="navigation__item">
+                        <a class="item__link" href="#report-bug">Reporta un bug :c</a>
                     </li>
                 </ul>
             </nav>
         </header>
-
-        <!-- Pagina principal -->
-        <section class="container">
-            <h1>LET’S CREATE EFFECTIVE COMMENTS</h1>
-            <a class="btn-start-project  next-tbn" href="#form">Create new project</a>
-
-        </section>
-        <!-- Formulario para crear el proyecto -->
-        <section class="container" id="form">
-            <h2>Let's create a new project</h2>
-            <div class="form form-container">
-                <div class="form-image-animation">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="445" height="418" viewBox="0 0 565 518" fill="none">
-                        <path d="M562.715 265.13C584.147 403.226 426.045 490.54 287.949 511.972C149.853 533.404 23.3899 490.253 1.95801 352.157C-19.4739 214.061 159.206 24.4903 297.302 3.05842C435.398 -18.3735 541.283 127.034 562.715 265.13Z" fill="#ABBDDC"/>
-                    </svg>
-                </div>
-            
-                <form action="/mload-data-process" method="post">
-                    <fieldset class="step">
-                        <legend>1 / 6</legend>
-                        <h3>Choose you main roll on the project </h3>
-                        <div class="radio-input-container">
-                            <label><input class="input-radio-roll" type="radio" name="radio" value="dev" />Web Developer</label>
-                            <label><input class="input-radio-roll" type="radio" name="radio" value="content" />Content Developer</label>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="step hidden">
-                        <legend>2 / 6</legend>
-                        <h3>Add the git branch of the project</h3>
-                        <label for="project-master">Branch of the project</label>
-                        <input class="input-text" type="text" name="project-master" id="project-master-jira" placeholder="MY24BRZ24ML-1"/>
-                    </fieldset>
-
-                    <fieldset class="step hidden">
-                        <legend>3 / 6</legend>
-                        <h3>Add the master ticket of jira project</h3>
-                        <label for="project-master">Jira master ticket</label>
-                        <input class="input-text" type="text" name="project-master" id="project-master-jira" placeholder="brz-mload-2024"/>
-                    </fieldset>
-
-                    <fieldset class="step hidden">
-                        <legend>4 / 6</legend>
-                        <h3>Add the proj server of the project</h3>
-                        <label for="project-master">Proj server</label>
-                        <input class="input-text" type="text" name="project-master" id="project-master-jira" placeholder="proj4.boxer.subaru.com"/>
-                    </fieldset>
-
-                    <fieldset class="step hidden">
-                        <legend>5 / 6</legend>
-                        <h3>Choose the model of the current project</h3>
-                        
-                        <select name="modelo" id="modelo">
-                            <option value="sol">SOL</option>
-                            <option value="asc">ASC</option>
-                            <option value="for">FOR</option>
-                            <option value="ctk">CTK</option>
-                            <option value="leg">LEG</option>
-                            <option value="obk">OBK</option>      
-                            <option value="imp">IMP</option>
-                            <option value="wrx">WRX</option>
-                        </select>
-                    </fieldset>
-
-                    <fieldset class="step hidden">
-                        <legend>6 / 6</legend>
-                        <h3>Choose the year of the current project</h3>
-                        
-                        <select name="year" id="year">
-                            <option value="2024">2024</option>
-                            <option value="2025">2023</option>
-                            <option value="2023">2025</option>
-                        </select>
-                    </fieldset>    
-        
-                    <button class="hidden" type="">Prev</button>
-                    <a class="active next-tbn" type="">Next</a>
-                    <button class="hidden" type="submit">Crear proyecto</button>
-                </form>
+        <section class="">
+            <div class="wrapper">
+                <h1>Con Moody creamos comentarios mas efectivos para QA</h1>
+                <a class="button btn__form" href="#form">Empezemos un proyecto nuevo</a>
+                <a class="button btn__about" href="#about">Acerca de Moody</a>
             </div>
         </section>
+        <section id="about">
+            <div class="wrapper section__animation">
+                <h2>Acerca de Moody</h2>
 
+                <p>"¡Hola! Este proyecto es la idea que nació de otra idea entre todos nosotros. A veces, cuando llega la época de enviar tickets a QA, me siento un poco abrumada por la cantidad de comentarios que debo crear.</p>
+
+                <p>No es solo crearlos, sino también agregar la lista de assets, verificar si esa lista está actualizada, revisar si falta algún asset y, si es así, evitar darle trabajo extra al equipo de QA yendo a preguntar.</p>
+
+                <p>
+                    No es solo crearlos, sino también agregar la lista de assets, verificar si esa lista está actualizada, revisar si falta algún asset y, si es así, evitar darle trabajo extra al equipo de QA yendo a preguntar.
+                    No es que no me guste que pregunten, de hecho, ¡amo las preguntas! Pero en esos momentos pienso: <i>'Ojalá pudiera ser un poco más eficiente con esto'</i>.
+                </p>
+
+                <p>Pero, justo cuando nuestro amigo David hizo este desafío, en ese momento estaba empezando a enviar los tickets de model load a QA y me pregunté: <b>'¿Y si creo un formulario que me ayude a hacer estos comentarios más fácilmente?'</b></p>
+
+                <p>
+                    De ahí viene Moody, que al principio iba a ser un bichito, pero no resultó, ¡jajajá!
+                    Espero que cuando esto esté terminado, el equipo pueda hacer uso de él. ¡Con mucho cariño para todos!"
+                </p>
+        </section>
+        <section class="visible" id="form">
+            <div class="wrapper form__section">
+                <div>
+                    <h2>Empecemos un proyecto desde cero</h2>
+                    <p>Para empezar un proyecto nuevo, debemos definir algunos puntos importantes, como el roll, boxer y branch</p>
+                </div>
+                
+                <form class="form">
+                    <div class="form__steps">
+                        <fieldset class="form__step" id="step-1">
+                            <legend class="step__number" id="step-1">1 / 6</legend>
+                            <h3 id="stepTitle">Escoje tu roll para este proyecto</h3>
+                            <div class="form__input--container" id="inputContainer">
+                                <label><input class="form__input form__input--radio" type="radio" name="radio" value="dev" required/>Web Developer</label>
+                                <label><input class="form__input form__input--radio" type="radio" name="radio" value="content" required/>Content Developer</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form__step" id="step-2">
+                            <legend class="step__number">2 / 6</legend>
+                            <h3>Agrega el master ticket de jira</h3>
+                            <label for="project-master">Jira Master ticket</label>
+                            <input class="form__input form__input--text" type="url" name="project-master" 
+                                id="project-master" placeholder="https://jira.clynch.com/browse/MY24ASCML-1" required/>
+                        </fieldset>
+
+                        <fieldset class="form__step" id="step-3">
+                            <legend class="step__number">3 / 6</legend>
+                            <h3>Agrega el repositorio del proyecto</h3>
+                            <label for="project-branch">Git branch project</label>
+                            <input class="form__input form__input--text" type="text" name="project-branch" 
+                                id="project-branch" placeholder="brz-mload-2024" required/>
+                        </fieldset>
+
+                        <fieldset class="form__step" id="step-4">
+                            <legend class="step__number">4 / 6</legend>
+                            <h3>Agrega el servidor del proyecto</h3>
+                            <label for="project-server">Proj server</label>
+                            <input class="form__input form__input--text" type="url" name="project-server" 
+                                id="project-server" placeholder="https://proj4.boxer.subaru.com" required/>
+                        </fieldset>
+
+                        <fieldset class="form__step" id="step-5">
+                            <legend class="step__number">5 / 6</legend>
+                            <h3>Selecciona el modelo del proyecto</h3>
+                            
+                            <select class="form__input form__input--select" name="modelo" id="modelo" required>
+                                <option value="">-- Escoje un modelo --</option>
+                                <option value="sol">SOL</option>
+                                <option value="asc">ASC</option>
+                                <option value="for">FOR</option>
+                                <option value="ctk">CTK</option>
+                                <option value="leg">LEG</option>
+                                <option value="obk">OBK</option>      
+                                <option value="imp">IMP</option>
+                                <option value="wrx">WRX</option>
+                            </select>
+                        </fieldset>
+                        
+                        <button class="button form__button--send" type="submit">Crear proyecto</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+        <section class="wrapper hidden" id="assetList">
+            <div id="app"></div>
+        </section>
         <footer>
-            <p>This is a project that stars in collaboration with ML team and inspired by the <a href="https://codechallenge2023.netlify.app/">Code challenge 2023</a> </p>
+            <p class="wrapper">Esta es una colaboracion con el equipo de ML y el <a href="https://codechallenge2023.netlify.app/">Code challenge 2023</a></p>
         </footer>
     </div>
     <script src="./js/main.js"></script>

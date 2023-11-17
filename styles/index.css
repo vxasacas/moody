@@ -1,10 +1,18 @@
 @import './variables.css';
+@import './buttons.css';
+@import './navigation.css';
 @import './form.css';
+@import './assetsList.css';
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family:  var(--font-family);
     font-weight: var(--font-wght-light);
     color: var(--color-text);
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -16,64 +24,55 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 48px;
 }
 
 h3 { 
     font-size: 32px;
 }
 
-.main-container {
-    display: grid;
-    width: 1120px;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.container {
-    padding: 20% 5%;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 80px;
-}
-
-nav {
-    align-self: flex-end;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-}
-
-li {
-    list-style: none;
-    padding-left: 25px;
-}
-
 a {
+    display: inline-block;
     font-weight: var(--font-wght-regular);
     text-decoration: none;
     color: var(--color-text);
+    outline: none;
 }
 
-button, .next-tbn {
-    border: 2px var(--color-primary) solid;
-    border-radius: 25px;
-    background-color: var(--color-primary);
-    color: var(--color-text-button);
-    font-size: 20px;
-    padding: 12px 45px;
+p {
+    width: 55%;
 }
 
-footer {
-    height: 75px;
+.wrapper {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+.wrapper h1 {
+    width: 630px;
+}
+
+.wrapper h2 {
+    width: 480px;
+}
+
+section {
+    padding: 6rem 0;
 }
 
 .hidden {
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+footer {
+    height: 75px;
+    background-color: var(--color-background);
 }
